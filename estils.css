@@ -1,0 +1,156 @@
+/*Primera parte: reset y estilos generales*/
+
+/*Aplicamos box-sizing a todos los elementos*/
+*{
+    box-sizing: border-box;
+}
+
+/*Estilos generales de toda la página*/
+
+body{
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+}
+
+/*Segunda parte: Cascafa*/
+
+.caixa-avis{
+    background-color: #dbeafe;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+/*Tercera parte: Display y modelo de cajas*/
+
+
+/*Cabecera*/
+#capcalera{
+text-align: center;
+color: white;
+background-color: #0f172a;
+padding: 20px;
+}
+
+/*Menú horizontal*/
+
+.menu li{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/*Contenedor principal*/
+#contingut {
+    width: 85%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/*Tarjetas*/
+
+.fitxa{
+    background-color:white;
+    border: 2px solid #cbd5e1;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/*Etiqueta dentro del texto*/
+
+.etiqueta-inline{
+    display:inline-block;
+    background-color: #e2e8f0;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/*Cuarta parte: Selectores combinadores*/
+
+/*Seleccionar descendiente*/
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+}
+
+/*Selector de hijo directo*/
+
+#contingut > section {
+    background-color: white;
+    padding: 25px;
+}
+
+
+/*Selector de hermanos adyacentes*/
+
+h2 + p {
+    font-weight: bold;
+    color: #0284c7;
+}
+
+/*Selector de hermanos generales*/
+
+h2 ~ p {
+    font-size: 1.05rem;
+}
+
+/*Quinta parte: Selectores de atributos*/
+
+/*Enlaces que se abren en otra pestaña*/
+
+a[target="_blank"] {
+    color: #15803d;
+    font-weight: bold;
+}
+
+/*Enlaces que llevan a archivos PDF*/
+
+a[href$=".pdf"] {
+    color: #b91c1c;
+}
+
+/*Sexta parte: Pseudoclases y pseudoelementos*/
+
+/*Cuando pasamos el ratón por los enlaces*/
+
+nav a:hover {
+    background-color: #334155;
+    border-radius: 4px;
+}
+
+/*Última tarjeta*/
+
+.fitxa:last-child {
+    margin-bottom: 0;
+    border-left: 6px solid #0284c7;
+}
+
+/*Flecha antes del título de las tarjetas*/
+
+.fitxa h3::before {
+    content: "➤ ";
+    color: #0284c7;
+}
+
+/*Etiqueta después de los enlaces PDF*/
+
+a[href$=".pdf"]::after {
+    content: " [PDF]";
+}
+
+/*Primera letra del párrafo de introducción*/
+#contingut p:first-letter {
+    font-size: 1.5rem;
+    color: #0284c7;
+}
+
+
+/*COMENTARIO SOBRE CASCADA
+
+El color de fondo que muestra el navegador depende de las reglas definidas en index.html.
+
+Si existe un estilo en línea normal que cambia el fondo, tendrá prioridad sobre la regla externa.
+
+
+*/
